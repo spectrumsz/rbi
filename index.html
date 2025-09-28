@@ -24,6 +24,8 @@
                     <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
                     <li><a href="#" class="nav-link" data-page="about">About</a></li>
                     <li><a href="#" class="nav-link" data-page="staff">Staff</a></li>
+                    <li><a href="#" class="nav-link" data-page="reviews">Reviews</a></li>
+                    <li><a href="#" class="nav-link" data-page="settings">Settings</a></li>
                     <li><a href="https://dsc.gg/rbi" class="nav-link" target="_blank">Discord</a></li>
                 </ul>
             </nav>
@@ -136,7 +138,7 @@
                     <div class="staff-card">
                         <div class="staff-header">
                             <div class="staff-avatar">
-                                <i class="fas fa-user"></i>
+                                <img src="https://images-ext-1.discordapp.net/external/7kG8GvaAyFTW94FQsZCs8yiC3GDDqorEamYmQhePvI4/https/cdn.discordapp.com/embed/avatars/3.png?format=webp&quality=lossless&width=205&height=205" alt="N1ght">
                             </div>
                             <div class="staff-info">
                                 <h3>N1ght</h3>
@@ -158,7 +160,7 @@
                     <div class="staff-card">
                         <div class="staff-header">
                             <div class="staff-avatar">
-                                <i class="fas fa-user"></i>
+                                <img src="https://images-ext-1.discordapp.net/external/NyyMVmlKwgabJ4U-3hp1HjmrgnH2HUkn1qjo5_aGUqw/%3Fsize%3D512/https/cdn.discordapp.com/avatars/973990455329034331/f0329916ff79e8aa3847afd0d8478a05.webp?format=webp&width=205&height=205" alt="Q">
                             </div>
                             <div class="staff-info">
                                 <h3>Q</h3>
@@ -180,7 +182,7 @@
                     <div class="staff-card">
                         <div class="staff-header">
                             <div class="staff-avatar">
-                                <i class="fas fa-user"></i>
+                                <img src="https://images-ext-1.discordapp.net/external/MzTEJAlqlBrgm9-ilvolo0nP-CsnNFhGl543mJucX-Q/%3Fsize%3D512/https/cdn.discordapp.com/avatars/528813176163139610/ade801a50883567a4a1527ffd2773053.webp?format=webp&width=205&height=205" alt="SlappyHue">
                             </div>
                             <div class="staff-info">
                                 <h3>SlappyHue</h3>
@@ -202,7 +204,7 @@
                     <div class="staff-card">
                         <div class="staff-header">
                             <div class="staff-avatar">
-                                <i class="fas fa-user"></i>
+                                <img src="https://images-ext-1.discordapp.net/external/H11wYBJKD46KQzhmLRtBcy8e-cABlAbqdqJL7IJBt20/%3Fsize%3D512/https/cdn.discordapp.com/avatars/1250316754920673333/f75850bd0552bae32e0639c93c7e1669.webp?format=webp&width=410&height=410" alt="Ray">
                             </div>
                             <div class="staff-info">
                                 <h3>Ray</h3>
@@ -224,7 +226,7 @@
                     <div class="staff-card">
                         <div class="staff-header">
                             <div class="staff-avatar">
-                                <i class="fas fa-user"></i>
+                                <img src="https://images-ext-1.discordapp.net/external/EILerTMCFrWueH0SI8NTDbE_8ACnULfWFGnKUAWMFMw/%3Fsize%3D512/https/cdn.discordapp.com/avatars/1052194772644794399/82aa56dd0e80ee1639181bbaceb43f3e.webp?format=webp&width=205&height=205" alt="Positive Rabbit">
                             </div>
                             <div class="staff-info">
                                 <h3>Positive Rabbit</h3>
@@ -246,7 +248,7 @@
                     <div class="staff-card">
                         <div class="staff-header">
                             <div class="staff-avatar">
-                                <i class="fas fa-user"></i>
+                                <img src="https://images-ext-1.discordapp.net/external/DJ-0bCO9LcfChPQ4UYL24F8y-kq-C7HIk854MFsE760/%3Fsize%3D512/https/cdn.discordapp.com/avatars/1258477179281604668/5989d207f202b9f724891ef73f9291e7.webp?format=webp&width=205&height=205" alt="RXAVOLKED">
                             </div>
                             <div class="staff-info">
                                 <h3>RXAVOLKED</h3>
@@ -263,6 +265,149 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Page -->
+        <section id="reviews" class="page">
+            <div class="reviews-content">
+                <h1 class="page-title">Community Reviews</h1>
+                <p class="page-subtitle">See what our community members are saying about Lua Hub</p>
+                
+                <div class="reviews-stats">
+                    <div class="average-rating">
+                        <div class="rating-value" id="averageRating">4.8</div>
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="rating-count" id="reviewCount">Based on 24 reviews</div>
+                    </div>
+                </div>
+                
+                <div class="add-review">
+                    <h2>Add Your Review</h2>
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label for="userName">Your Name</label>
+                            <input type="text" id="userName" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label>Your Rating</label>
+                            <div class="star-rating">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                            </div>
+                            <input type="hidden" id="rating" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewText">Your Review</label>
+                            <textarea id="reviewText" placeholder="Share your experience with Lua Hub"></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="anonymousReviews">
+                            <label for="anonymousReviews">Post anonymously</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Review</button>
+                    </form>
+                </div>
+                
+                <div class="reviews-grid" id="reviewsGrid">
+                    <!-- Reviews will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Page -->
+        <section id="settings" class="page">
+            <div class="settings-content">
+                <h1 class="page-title">Settings</h1>
+                <p class="page-subtitle">Customize your Lua Hub experience</p>
+                
+                <div class="settings-grid">
+                    <div class="settings-card">
+                        <h2>Appearance</h2>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3>Dark Mode</h3>
+                                <p>Switch to dark theme for better visibility in low light</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3>Particles Effect</h3>
+                                <p>Enable/disable background particle animation</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="particlesToggle" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-card">
+                        <h2>Notifications</h2>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3>Email Notifications</h3>
+                                <p>Receive updates and announcements via email</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="emailNotifications">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3>Discord Notifications</h3>
+                                <p>Get notified about new scripts and updates on Discord</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="discordNotifications" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-card">
+                        <h2>Privacy</h2>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3>Save Reviews</h3>
+                                <p>Allow Lua Hub to save your reviews locally</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="saveReviews" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3>Anonymous Reviews</h3>
+                                <p>Post reviews without showing your name</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="anonymousReviewsSetting">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="settings-actions">
+                    <button class="save-btn" id="saveSettings">Save Settings</button>
+                    <button class="reset-btn" id="resetSettings">Reset to Default</button>
                 </div>
             </div>
         </section>

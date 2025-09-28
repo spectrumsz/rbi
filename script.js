@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const pages = document.querySelectorAll('.page');
     const navMenu = document.getElementById('nav-links');
     const burger = document.getElementById('burger-menu');
-    const header = document.querySelector('.header');
 
     // Burger Menu Toggle
     burger.addEventListener('click', () => {
@@ -70,22 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
         floatingScript.style.top = (e.pageY + 15) + 'px';
     });
 
-    // Header hide/show on scroll
-    let lastScrollTop = 0;
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling down
-            header.classList.add('hidden');
-        } else {
-            // Scrolling up
-            header.classList.remove('hidden');
-        }
-        
-        lastScrollTop = scrollTop;
-    });
-
     // Reviews System
     initReviewsSystem();
 
@@ -98,82 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function showPage(pageId) {
     const pages = document.querySelectorAll('.page');
-    const currentPage = document.querySelector('.page.active');
-    
-    // Animate out current page
-    if (currentPage) {
-        currentPage.classList.remove('active');
-        
-        // Reset animations for elements on the current page
-        const animatedElements = currentPage.querySelectorAll('.animate');
-        animatedElements.forEach(el => {
-            el.classList.remove('animate');
-        });
-    }
-    
-    // Show new page after a short delay
-    setTimeout(() => {
-        pages.forEach(page => {
-            if (page.id === pageId) {
-                page.classList.add('active');
-                
-                // Trigger animations for elements on the new page
-                setTimeout(() => {
-                    animatePageElements(page);
-                }, 100);
-            }
-        });
-    }, 300);
-}
-
-function animatePageElements(page) {
-    // Animate feature cards on home page
-    const featureCards = page.querySelectorAll('.feature-card');
-    featureCards.forEach((card, index) => {
-        setTimeout(() => {
-            card.classList.add('animate');
-        }, index * 100);
+    pages.forEach(page => {
+        page.classList.remove('active');
+        if (page.id === pageId) {
+            page.classList.add('active');
+        }
     });
-    
-    // Animate stats on about page
-    const stats = page.querySelectorAll('.stat');
-    stats.forEach((stat, index) => {
-        setTimeout(() => {
-            stat.classList.add('animate');
-        }, index * 100);
-    });
-    
-    // Animate skills on about page
-    const skills = page.querySelectorAll('.skill-item');
-    skills.forEach((skill, index) => {
-        setTimeout(() => {
-            skill.classList.add('animate');
-        }, index * 100);
-    });
-    
-    // Animate staff cards on staff page
-    const staffCards = page.querySelectorAll('.staff-card');
-    staffCards.forEach((card, index) => {
-        setTimeout(() => {
-            card.classList.add('animate');
-        }, index * 100);
-    });
-    
-    // Animate page title and subtitle
-    const pageTitle = page.querySelector('.page-title');
-    const pageSubtitle = page.querySelector('.page-subtitle');
-    
-    if (pageTitle) {
-        setTimeout(() => {
-            pageTitle.classList.add('animate');
-        }, 100);
-    }
-    
-    if (pageSubtitle) {
-        setTimeout(() => {
-            pageSubtitle.classList.add('animate');
-        }, 300);
-    }
 }
 
 function initParticles() {
@@ -424,11 +337,3 @@ function resetSettings() {
         location.reload();
     }
 }
-
-// Initialize animations for the current page on load
-window.addEventListener('load', () => {
-    const currentPage = document.querySelector('.page.active');
-    if (currentPage) {
-        animatePageElements(currentPage);
-    }
-});

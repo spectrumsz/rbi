@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Discord - Lua Hub</title>
+    <meta http-equiv="refresh" content="0; url=https://dsc.gg/rbi">
+    <script>
+        window.location.href = "https://dsc.gg/rbi";
+    </script>
+</head>
+<body>
+    <p>Redirecting to Discord... <a href="https://dsc.gg/rbi">Click here if not redirected</a></p>
+</body>
+</html>

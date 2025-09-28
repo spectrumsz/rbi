@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lua Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="#" class="brand-title">
+                <div class="logo">
+                    <i class="fas fa-moon"></i>
+                </div>
+                Lua Hub
+            </a>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="#" class="nav-link" data-page="staff">Staff</a></li>
+                    <li><a href="https://dsc.gg/rbi" class="nav-link" target="_blank">Discord</a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu" id="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="home-content">
+                <div class="discord-card">
+                    <div class="discord-header">
+                        <div class="logo large">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <h1>Lua Hub</h1>
+                        <div class="members">200+ Members</div>
+                        <a href="https://dsc.gg/rbi" class="join-btn" target="_blank">JOIN DISCORD</a>
+                    </div>
+                    
+                    <div class="discord-content">
+                        <div class="script-section">
+                            <h2>Lua Hub Script:</h2>
+                            <div class="script-container">
+                                <div id="script">loadstring(game:HttpGet("https://luahub.netlify.app/script.lua"))()</div>
+                                <button class="copy-btn" id="copyBtn">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="features">
+                    <div class="feature-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Powerful Scripts</h3>
+                        <p>Advanced scripts with extensive features for various games.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Safe & Secure</h3>
+                        <p>Obfuscated thoroughly with AuthGuard for maximum security.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Active Community</h3>
+                        <p>Join our growing community of 200+ members.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page">
+            <div class="about-content">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <img src="https://cdn.discordapp.com/avatars/1145494169742221372/1e43522556d14ba1b469b9f303a39620.webp" alt="Exvy" class="profile-pic">
+                        <h2>Exvy</h2>
+                        <a href="https://guns.lol/envysplague" class="profile-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            guns.lol/envysplague
+                        </a>
+                    </div>
+                    <div class="profile-info">
+                        <h3>About Me</h3>
+                        <p>Developer and creator of Lua Hub. Passionate about creating powerful and secure scripting solutions for the gaming community.</p>
+                        
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">Community Members</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">99.123%</span>
+                                <span class="stat-label">Satification Rate</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">AuthGuard Protected</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skills">
+                            <h4>Skills & Expertise</h4>
+                            <div class="skills-grid">
+                                <div class="skill-item">Lua Scripting</div>
+                                <div class="skill-item">GFX Profile Designer</div>
+                                <div class="skill-item">UI/UX Design</div>
+                                <div class="skill-item">Community Management</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Staff Page -->
+        <section id="staff" class="page">
+            <div class="staff-content">
+                <h1 class="page-title">Our Team</h1>
+                <p class="page-subtitle">Meet the dedicated team behind Lua Hub</p>
+                
+                <div class="staff-grid">
+                    <!-- N1ght - Mod -->
+                    <div class="staff-card">
+                        <div class="staff-header">
+                            <div class="staff-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="staff-info">
+                                <h3>N1ght</h3>
+                                <span class="staff-role mod">Moderator</span>
+                            </div>
+                        </div>
+                        <div class="staff-details">
+                            <p>Ensuring our community remains a safe and welcoming environment for all members.</p>
+                            <div class="staff-stats">
+                                <div class="stat">
+                                    <span class="stat-number">Active</span>
+                                    <span class="stat-label">Status</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Q - Admin -->
+                    <div class="staff-card">
+                        <div class="staff-header">
+                            <div class="staff-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="staff-info">
+                                <h3>Q</h3>
+                                <span class="staff-role admin">Administrator</span>
+                            </div>
+                        </div>
+                        <div class="staff-details">
+                            <p>Managing server operations and ensuring everything runs smoothly.</p>
+                            <div class="staff-stats">
+                                <div class="stat">
+                                    <span class="stat-number">Active</span>
+                                    <span class="stat-label">Status</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- SlappyHue - Admin -->
+                    <div class="staff-card">
+                        <div class="staff-header">
+                            <div class="staff-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="staff-info">
+                                <h3>SlappyHue</h3>
+                                <span class="staff-role admin">Administrator</span>
+                            </div>
+                        </div>
+                        <div class="staff-details">
+                            <p>Helping maintain server stability and assisting community members.</p>
+                            <div class="staff-stats">
+                                <div class="stat">
+                                    <span class="stat-number">Active</span>
+                                    <span class="stat-label">Status</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ray - Mod -->
+                    <div class="staff-card">
+                        <div class="staff-header">
+                            <div class="staff-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="staff-info">
+                                <h3>Ray</h3>
+                                <span class="staff-role mod">Moderator</span>
+                            </div>
+                        </div>
+                        <div class="staff-details">
+                            <p>Keeping our community guidelines enforced and helping resolve issues.</p>
+                            <div class="staff-stats">
+                                <div class="stat">
+                                    <span class="stat-number">Active</span>
+                                    <span class="stat-label">Status</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Positive Rabbit - Community Manager -->
+                    <div class="staff-card">
+                        <div class="staff-header">
+                            <div class="staff-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="staff-info">
+                                <h3>Positive Rabbit</h3>
+                                <span class="staff-role manager">Community Manager</span>
+                            </div>
+                        </div>
+                        <div class="staff-details">
+                            <p>Fostering a positive community environment and organizing community events.</p>
+                            <div class="staff-stats">
+                                <div class="stat">
+                                    <span class="stat-number">Active</span>
+                                    <span class="stat-label">Status</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- RXAVOLKED - Staff -->
+                    <div class="staff-card">
+                        <div class="staff-header">
+                            <div class="staff-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="staff-info">
+                                <h3>RXAVOLKED</h3>
+                                <span class="staff-role staff">Staff</span>
+                            </div>
+                        </div>
+                        <div class="staff-details">
+                            <p>Supporting the team with various tasks and assisting community members.</p>
+                            <div class="staff-stats">
+                                <div class="stat">
+                                    <span class="stat-number">Active</span>
+                                    <span class="stat-label">Status</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Lua Hub. All rights reserved. | <a href="https://dsc.gg/rbi" target="_blank">Join our Discord</a></p>
+        </div>
+    </footer>
+
+    <div class="floating-script" id="floatingScript"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
